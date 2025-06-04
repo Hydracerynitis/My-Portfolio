@@ -1,7 +1,8 @@
+<template>
     <footer class="footer-w3ls text-center py-5">
         <div class="container pt-4">
             <div class="mx-auto" style="max-width:600px;">
-                <a href="index.html" class="footer-logo py-1">
+                <a href="/" class="footer-logo py-1">
                     <i class="fas fa-bold"></i>.
                 </a>
                 <p class="mt-4 text-white">Contact me on Social Media.</p>
@@ -39,3 +40,4 @@
             <!-- <p class="copy-right-w3 text-white mt-5 pt-4">Copyright &copy; 2021.Company name All rights reserved.</p> -->
         </div>
     </footer>
+</template>

@@ -1,7 +1,8 @@
+<template>
     <header id="site-header" class="fixed-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="/">
                     <i class="fas fa-bold"></i>.
                 </a>
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
@@ -13,13 +14,13 @@
                 <div class="collapse navbar-collapse" id="navbarScroll">
                     <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="experience.html">Experience</a>
+                            <a class="nav-link" href="project">Project</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="contact">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -41,3 +42,5 @@
             </nav>
         </div>
     </header>
+</template>
+    
