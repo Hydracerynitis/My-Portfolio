@@ -32,84 +32,9 @@
         </div>
         <!-- //animations icons -->
     </section>
-    <!-- //banner section -->
-
-    <!-- logo partners -->
-    <!-- <section class="w3l-clients pt-5 pb-4" id="clients">
-        <div class="container">
-            <div class="company-logos text-center">
-                <div class="row mx-auto justify-content-center">
-                    <div class="col-md-2 col-sm-4 col-6 ">
-                        <img src="assets/images/logo1.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-md-2 col-sm-4 col-6">
-                        <img src="assets/images/logo2.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-md-2 col-sm-4 col-6 mt-sm-0 mt-3">
-                        <img src="assets/images/logo3.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-md-2 col-sm-4 col-6 mt-md-0 mt-3">
-                        <img src="assets/images/logo4.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-md-2 col-sm-4 col-6 mt-md-0 mt-3">
-                        <img src="assets/images/logo5.png" alt="" class="img-fluid">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!-- //logo partners -->
-
-    <!-- grids section -->
-    <!-- <section class="w3l-bottom-grids-6 pt-sm-5 pb-5" id="features">
-        <div class="container pt-lg-4">
-            <div class="grids-area-hny main-cont-wthree-fea row">
-                <div class="col-md-3 col-sm-4 ps-xl-5">
-                    <h4 class="ab-exper-count mb-sm-4 ps-lg-4">22</h4>
-                    <p class="ab-content ps-lg-4">years of experience working</p>
-                </div>
-                <div class="col-xl-8 col-md-9 col-sm-8 offset-xl-1 ps-xl-0 pe-xl-5 mt-sm-0 mt-4">
-                    <h3 class="title-style mb-sm-5 mb-4">I'm a designer & developer with a passion for web design</h3>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 grids-feature">
-                            <div class="area-box active">
-                                <div class="icon-style">
-                                    <i class="fas fa-lightbulb"></i>
-                                </div>
-                                <h4><a href="#feature" class="title-head">Creative Design</a></h4>
-                                <a href="about.html" class="btn more p-0">Explore More<i
-                                        class="fas fa-long-arrow-alt-right ms-1"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 grids-feature mt-md-0 mt-4">
-                            <div class="area-box">
-                                <div class="icon-style">
-                                    <i class="fas fa-laptop-code"></i>
-                                </div>
-                                <h4><a href="#feature" class="title-head">Web Design</a></h4>
-                                <a href="about.html" class="btn more p-0">Explore More<i
-                                        class="fas fa-long-arrow-alt-right ms-1"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 grids-feature mt-lg-0 mt-4">
-                            <div class="area-box">
-                                <div class="icon-style">
-                                    <i class="fas fa-layer-group"></i>
-                                </div>
-                                <h4><a href="#feature" class="title-head">Brand Identity</a></h4>
-                                <a href="about.html" class="btn more p-0">Explore More<i
-                                        class="fas fa-long-arrow-alt-right ms-1"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> 
-    </section>-->
-    <!-- //grids section -->
 
     <!-- about section -->
-    <section class="w3l-aboutblock1 pt-lg-5 pt-2 pb-5" id="about">
+    <section class="w3l-aboutblock1" id="about">
         <div class="container py-md-5 py-4">
             <div class="row align-items-center">
                 <div class="col-lg-4">

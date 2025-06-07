@@ -1,20 +1,15 @@
-<template>
-<!-- inner banner -->
-    <section class="inner-banner py-5">
-        <div class="w3l-breadcrumb py-lg-5">
-            <div class="container pt-4 pb-sm-4">
-                <h4 class="inner-text-title font-weight-bold pt-sm-5 pt-4">Projects</h4>
-                <ul class="breadcrumbs-custom-path">
-                    <li><a href="/">Home</a></li>
-                    <li class="active"><i class="fas fa-angle-right mx-2"></i>Projects</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <!-- //inner banner -->
+<script setup>
+import portfolioContext from "@/context/PortfolioContext"
+import { computed } from 'vue';
 
+const isDark=computed(() =>{
+    return portfolioContext.state.theme=="dark"
+})
+</script>
+
+<template>
     <!-- Project 1 -->
-     <section class="w3l-aboutblock1 pt-lg-5 pt-2 pb-5 white-color" id="about">
+     <section class="w3l-aboutblock1 white-color" id="about" >
         <div class="container py-md-5 py-4">
             <div class="row align-items-center">
                 <div class="col-lg-4">
@@ -35,7 +30,7 @@
     <!-- // Project 1 -->
 
     <!-- project 2 -->
-    <section class="w3l-aboutblock1 pt-lg-5 pt-2 pb-5 grey-color" id="about">
+    <section class="w3l-aboutblock1 grey-color" id="about" >
         <div class="container py-md-5 py-4">
             <div class="row align-items-center">
                 <div class="col-lg-8 ps-lg-5 mt-lg-0 mt-5">
@@ -56,7 +51,7 @@
     <!-- // Project 2 -->
 
     <!-- Project 3 -->
-     <section class="w3l-aboutblock1 pt-lg-5 pt-2 pb-5 white-color" id="about">
+     <section class="w3l-aboutblock1 white-color" id="about">
         <div class="container py-md-5 py-4">
             <div class="row align-items-center">
                 <div class="col-lg-4">

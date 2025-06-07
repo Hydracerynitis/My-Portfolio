@@ -36,8 +36,53 @@
                     </ul>
                 </div>
             </div>
-            <!-- copyright -->
-            <!-- <p class="copy-right-w3 text-white mt-5 pt-4">Copyright &copy; 2021.Company name All rights reserved.</p> -->
         </div>
     </footer>
+    <Transition name="fade">
+        <button v-on:click="topFunction()" v-show="showButton" id="movetop" title="Go to top">
+                <span class="fas fa-level-up-alt" aria-hidden="true"></span>
+            </button>
+    </Transition>
+    
+
 </template>
+
+<script>
+export default{
+    data(){
+        return {
+            showButton: false
+        }
+    },
+    mounted() {
+        window.addEventListener('scroll', this.scrollFunction)
+    },
+    beforeDestroy() {
+        window.removeEventListener('scroll', this.scrollFunction)
+    },
+    methods:{
+        scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                this.showButton=true;
+            } else {
+                this.showButton=false;
+            }
+        },
+        topFunction() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        }
+    }
+}
+</script>
+
+<style scoped>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+</style>
