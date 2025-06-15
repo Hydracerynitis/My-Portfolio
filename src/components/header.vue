@@ -1,6 +1,6 @@
 <script setup>
-import portfolioContext from "@/context/PortfolioContext"
-import VueLogo from "@/assets/logo.svg"
+import portfolioContext from "/src/context/PortfolioContext"
+import VueLogo from "/src/assets/logo.svg"
 import { computed } from 'vue';
 import { useRoute } from 'vue-router'
 
@@ -15,7 +15,7 @@ const pageName = computed(() => {
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a href="/">
-                    <img class="narbar-brand" :src="VueLogo" width="52" height="52"/>
+                    <img :src="VueLogo" width="52" height="52"/>
                 </a>
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
@@ -77,7 +77,6 @@ export default{
         },
         fixScroll(){
             document.body.classList.toggle('noscroll');
-            document.getElementsByTagName("header")[0].classList.toggle('active');
         }
     }
 }

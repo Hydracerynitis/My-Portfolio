@@ -1,11 +1,16 @@
+<script setup>
+import VueLogo from "/src/assets/logo.svg"
+</script>
+
 <template>
-    <footer class="footer-w3ls text-center py-5">
+    <footer class="footer-w3ls text-center">
         <div class="container pt-4">
             <div class="mx-auto" style="max-width:600px;">
-                <a href="/" class="footer-logo py-1">
-                    <i class="fas fa-bold"></i>.
+                <a href="/">
+                    <img :src="VueLogo" width="52" height="52"/>
                 </a>
-                <p class="mt-4 text-white">Contact me on Social Media.</p>
+                <p class="mt-4 text-white">Built with <b>Vue</b> framework.</p>
+                <p class="text-white">Contact me on Social Media.</p>
                 <div class="social-icons-main mt-4 pb-3">
                     <ul class="social-icons3">
                         <li>
