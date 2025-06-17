@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from 'vue'
+import { onMounted,ref } from 'vue'
 
 const props=defineProps({
     "imageName":String,
@@ -8,8 +8,10 @@ const props=defineProps({
     "imageLeft":Boolean
 })
 
-const imageUrl=computed(()=>{
-    return "/src/assets/images/"+props.imageName
+const imageUrl=ref("")
+const imageName=ref(props.imageName)
+onMounted(async()=>{
+    imageUrl.value=(await import(`../assets/images/${imageName.value}.jpg`)).default
 })
 </script>
 

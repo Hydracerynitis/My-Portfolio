@@ -7,7 +7,7 @@ import paragraph from '@/components/paragraph.vue';
 </script>
 <template>
     <headlineBanner/>
-    <paragraph imageName="about.jpg" title="About Me" subtitle="My Intro">
+    <paragraph imageName="about" title="About Me" subtitle="My Intro">
         <p class="mt-3">I am a graduate student of Bachelor of Advanced Science (Honor) with first class honor with a GPA of 7.563. 
                         I specialize in Machine Learning and fairness in machine learning. Experienced in machine learning research, with strong software development, critical thinking and collaboration skills. 
                         Currently looking for full-time graduate data scientist roles or software development roles.</p>
