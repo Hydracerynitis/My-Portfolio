@@ -16,27 +16,13 @@ onMounted(async()=>{
 
 <template>
     <div class="col-lg-4 col-md-6 item" style="margin-top:2rem;">
-        <a :href="url" data-lightbox="example-set" @data-title="title" class="zoom d-block">
+        <router-link :to="url" data-lightbox="example-set" @data-title="title" class="zoom d-block">
             <img class="card-img-bottom d-block" :src="imageUrl" alt="Card image cap">
                 <span class="overlay__hover"></span>
                 <span class="hover-content">
                     <span class="title">{{title}}</span>
                     <span class="content"><slot/></span>
                 </span>
-        </a>
+        </router-link>
     </div>
 </template>
-
-<!-- <script>
-export default {
-//   data() {
-//     return {
-//       imageName: 'my-image.jpg',
-//       imageUrl: null
-//     }
-//   },
-  async mounted() {
-    
-  }
-}
-</script> -->

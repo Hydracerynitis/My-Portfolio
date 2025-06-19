@@ -1,3 +1,15 @@
+<script setup>
+import emailjs from '@emailjs/browser';
+
+const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+emailjs.init({
+  publicKey: publicKey,
+  limitRate: {
+    throttle: 10000, // 10s
+  },
+});
+</script>
+
 <template>
     <section class="w3l-contact" id="contact">
         <div class="container py-lg-5 py-4">
@@ -39,23 +51,137 @@
                     </ul>
                 </div>
                 <div class="col-md-6 contact-right mt-md-0 mt-5 ps-lg-0">
-                    <form action="https://sendmail.w3layouts.com/submitForm" method="post" class="signin-form">
+                    <form @submit.prevent="sendEmail" class="signin-form">
                         <div class="input-grids">
-                            <input type="text" name="w3lName" id="w3lName" placeholder="Your Name*"
-                                class="contact-input" required="" />
-                            <input type="email" name="w3lSender" id="w3lSender" placeholder="Your Email*"
-                                class="contact-input" required="" />
-                            <input type="text" name="w3lSubect" id="w3lSubect" placeholder="Subject*"
-                                class="contact-input" required="" />
+                            <input 
+                                type="text" 
+                                name="user_name" 
+                                id="user_name" 
+                                placeholder="Your Name*"
+                                class="contact-input" 
+                                v-model="formData.user_name"
+                                required="true" 
+                            />
+                            <input 
+                                type="email" 
+                                name="user_email" 
+                                id="user_email" 
+                                placeholder="Your Email*"
+                                class="contact-input" 
+                                v-model="formData.user_email"
+                                required="true" 
+                            />
+                            <input 
+                                type="text" 
+                                name="subject" 
+                                id="subject" 
+                                placeholder="Subject*"
+                                class="contact-input" 
+                                v-model="formData.subject"
+                                required="true" 
+                            />
                         </div>
                         <div class="form-input">
-                            <textarea name="w3lMessage" id="w3lMessage" placeholder="Type your message here*"
-                                required=""></textarea>
+                            <textarea 
+                                name="message" 
+                                id="message" 
+                                placeholder="Type your message here*"
+                                v-model="formData.message"
+                                required="true"
+                            ></textarea>
                         </div>
-                        <button class="btn btn-style">Send Message</button>
+                        <button 
+                            type="submit" 
+                            class="btn btn-style" 
+                            :disabled="isLoading"
+                        >
+                            <span v-if="isLoading">Sending...</span>
+                            <span v-else>Send Message</span>
+                        </button>
                     </form>
+                    
+                    <!-- Success/Error Messages -->
+                    <div v-if="message" class="mt-3">
+                        <div v-if="isSuccess" class="alert alert-success" role="alert">
+                            {{ message }}
+                        </div>
+                        <div v-else class="alert alert-danger" role="alert">
+                            {{ message }}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 </template>
+
+<script>
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+
+export default {
+    data() {
+        return {
+            formData: {
+                user_name: '',
+                user_email: '',
+                subject: '',
+                message: ''
+            },
+            isLoading: false,
+            message: '',
+            isSuccess: false
+        }
+    },
+    methods: {
+        sendEmail() {
+            this.isLoading = true;
+            this.message = '';
+            this.isSuccess = false;
+
+            // Use Vite environment variables for service and template IDs
+            const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+            const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+           
+            emailjs.send(
+                serviceId,
+                templateId,
+                {
+                    subject: this.formData.subject,
+                    name: this.formData.user_name,
+                    email: this.formData.user_email,
+                    time: this.formData.user_email,
+                    message: this.formData.message,
+                }
+            ).then(
+                (response) =>{
+                    console.log('SUCCESS!', response.status, response.text)
+                    this.isLoading = false;
+                    this.isSuccess = true;
+                    this.message = 'Thank you! Your message has been sent successfully.';
+                    this.resetForm();
+                },
+                (error) => {
+                    if (error instanceof EmailJSResponseStatus) {
+                        
+                        console.log('EMAILJS FAILED:', error);
+                    }
+                    else{
+                        console.error('Email sending failed:', error);
+                    }
+                    this.isLoading = false;
+                    this.isSuccess = false;
+                    this.message = 'Sorry, there was an error sending your message. Please try again or contact me directly at kejundai53@gmail.com';
+                }
+            )
+        },
+        resetForm() {
+            this.formData = {
+                user_name: '',
+                user_email: '',
+                subject: '',
+                message: ''
+            };
+        }
+    }
+}
+</script>

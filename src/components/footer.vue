@@ -6,9 +6,9 @@ import VueLogo from "/src/assets/logo.svg"
     <footer class="footer-w3ls text-center">
         <div class="container pt-4">
             <div class="mx-auto" style="max-width:600px;">
-                <a href="/">
+                <router-link to="/">
                     <img :src="VueLogo" width="52" height="52"/>
-                </a>
+                </router-link>
                 <p class="mt-4 text-white">Built with <b>Vue</b> framework.</p>
                 <p class="text-white">Contact me on Social Media.</p>
                 <div class="social-icons-main mt-4 pb-3">
@@ -28,16 +28,6 @@ import VueLogo from "/src/assets/logo.svg"
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
                         </li>
-                        <!-- <li>
-                            <a href="#dribbble">
-                                <i class="fab fa-dribbble"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#instagram">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </li> -->
                     </ul>
                 </div>
             </div>

@@ -4,9 +4,11 @@ import { useRoute } from 'vue-router'
 
 const location = useRoute();
 const crumbs = computed(() => {
-    const breadcrumbs=[{ name: 'home', path: '/' }];
+    if(location.name==='404')
+        return [{ name: '404', path: '/*' }]
+    const crumbs=[{ name: 'home', path: '/' }];
     if (location.path==="/"){
-        return breadcrumbs
+        return crumbs
     }       
     const nodes=location.path.split("/")
     nodes.shift()
@@ -17,12 +19,12 @@ const crumbs = computed(() => {
         const name = matchedRoute?.meta?.breadcrumb || 
                      matchedRoute?.name || 
                      path.charAt(0).toUpperCase() + path.slice(1);
-        breadcrumbs.push({
+        crumbs.push({
           name,
           path: cumulativePath
         });
     })
-    return breadcrumbs
+    return crumbs
 });
 </script>
 
@@ -38,7 +40,7 @@ const crumbs = computed(() => {
                             {{ crumb.name }}
                         </span>
                         <span v-else>
-                            <a :href="crumb.path">{{ crumb.name }}</a>
+                            <router-link :to="crumb.path">{{ crumb.name }}</router-link>
                         </span>
                     </li>
                 </ul>

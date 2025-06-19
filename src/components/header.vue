@@ -14,9 +14,9 @@ const pageName = computed(() => {
     <header id="site-header" class="fixed-top nav-fixed">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a href="/">
+                <router-link to="/">
                     <img :src="VueLogo" width="52" height="52"/>
-                </a>
+                </router-link>
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
                     aria-label="Toggle navigation" @click="fixScroll">
@@ -26,13 +26,13 @@ const pageName = computed(() => {
                 <div class="collapse navbar-collapse" id="navbarScroll">
                     <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/" :class="{active:pageName==='Home'}">Home</a>
+                            <router-link class="nav-link" aria-current="page" to="/" :class="{active:pageName==='Home'}">Home</router-link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/project" :class="{active:pageName==='Project'}">Project</a>
+                            <router-link class="nav-link" to="/project" :class="{active:pageName==='Project'}">Project</router-link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/contact" :class="{active:pageName==='Contact'}">Contact</a>
+                            <router-link class="nav-link" to="/contact" :class="{active:pageName==='Contact'}">Contact</router-link>
                         </li>
                     </ul>
                 </div>

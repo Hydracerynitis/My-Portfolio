@@ -28,7 +28,7 @@ import paragraph from '@/components/paragraph.vue';
                 <li class="name-style">Email</li> <li>:</li> <li><p><a href="mailto:kejundai53@gmail.com">kejundai53@gmail.com</a></p></li>
             </ul>
         </div>
-        <a href="#download" class="btn btn-style mt-5">Download CV</a>
+        <router-link to="/Kejun_Dai_CV.pdf" target="_blank" class="btn btn-style mt-5">View My CV</router-link>
     </paragraph>
     <qualification class="grey-color"/>
     <skill />

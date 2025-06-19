@@ -16,7 +16,7 @@ import bottomLeftIcon from '/src/assets/images/icon6.png'
                         I want to bring the best solutions to the problem with power of Machine Learning.
                     </p>
                     <div class="d-flex align-items-center buttons-banner mt-sm-5 mt-4">
-                        <a href="/contact" class="btn btn-style me-2">Hire Me</a>
+                        <router-link to="/contact" class="btn btn-style me-2">Hire Me</router-link>
                     </div>
                 </div>
                 <div class="col-md-6">
