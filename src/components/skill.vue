@@ -1,3 +1,6 @@
+<script setup>
+import skillProgress from '/src/components/elements/skillProgress.vue';
+</script>
 <template>
     <section class="w3l-progress py-5" id="progress">
         <div class="container py-md-5 py-4">
@@ -7,74 +10,18 @@
             </div>
             <div class="row py-lg-4">
                 <div class="col-lg-6 pe-lg-5">
-                    <div class="progress-info info1">
-                        <h6 class="progress-tittle">Scikit-Learn <span class="">80%</span></h6>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped gradient-1" role="progressbar"
-                                style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-info info2">
-                        <h6 class="progress-tittle">Pandas <span class="">95%</span>
-                        </h6>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped gradient-2" role="progressbar"
-                                style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-info info3">
-                        <h6 class="progress-tittle">Seaborn <span class="">70%</span></h6>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped gradient-3" role="progressbar"
-                                style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-info info4 mb-0">
-                        <h6 class="progress-tittle">MatplotLib <span class="">75%</span></h6>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped gradient-4" role="progressbar"
-                                style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                            </div>
-                        </div>
-                    </div>
+                    <skillProgress percentage="90" frontColor="#0d8abc" backColor="#61fded">Scikit-Learn</skillProgress>
+                    <skillProgress percentage="95" frontColor="#d45529" backColor="#eece90">Pandas</skillProgress>
+                    <skillProgress percentage="70" frontColor="#f646a9" backColor="#5c51ff">Seaborn</skillProgress>
+                    <skillProgress class="mb-0"
+                        percentage="75" frontColor="#e77654" backColor="#e5529a">MatplotLib</skillProgress>
                 </div>
                 <div class="col-lg-6 ps-lg-5 mt-lg-0 mt-5">
-                    <div class="progress-info info1">
-                        <h6 class="progress-tittle">React Js <span class="">70%</span></h6>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped gradient-1" role="progressbar"
-                                style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-info info2">
-                        <h6 class="progress-tittle">Node JS <span class="">65%</span>
-                        </h6>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped gradient-2" role="progressbar"
-                                style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-info info3">
-                        <h6 class="progress-tittle">Express JS <span class="">60%</span></h6>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped gradient-3" role="progressbar"
-                                style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-info info4 mb-0">
-                        <h6 class="progress-tittle">MongoDB <span class="">75%</span></h6>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped gradient-4" role="progressbar"
-                                style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                            </div>
-                        </div>
-                    </div>
+                    <skillProgress percentage="75" frontColor="#0d8abc" backColor="#61fded">React.js</skillProgress>
+                    <skillProgress percentage="80" frontColor="#d45529" backColor="#eece90">Vue.js</skillProgress>
+                    <skillProgress percentage="60" frontColor="#f646a9" backColor="#5c51ff">Express.js</skillProgress>
+                    <skillProgress class="mb-0"
+                        percentage="70" frontColor="#e77654" backColor="#e5529a">MongoDB</skillProgress>
                 </div>
             </div>
         </div>
