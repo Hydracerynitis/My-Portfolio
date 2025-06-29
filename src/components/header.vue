@@ -1,13 +1,34 @@
 <script setup>
 import portfolioContext from "/src/context/PortfolioContext"
 import VueLogo from "/src/assets/logo.svg"
-import { computed } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router'
 
 const location = useRoute();
 const pageName = computed(() => {
     return location.name;
 })
+
+const collapse=ref(true)
+onMounted(()=>{
+    document.documentElement.setAttribute('data-theme', portfolioContext.state.theme);
+})
+
+function switchTheme(event) {
+    if (event.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        portfolioContext.commit("set_theme","dark")
+    }
+    else {        
+        document.documentElement.setAttribute('data-theme', 'light');
+        portfolioContext.commit("set_theme","light")
+    }
+}
+
+function fixScroll(){
+            document.body.classList.toggle('noscroll');
+            collapse.value=!collapse.value;
+        }
 </script>
 
 <template>
@@ -17,13 +38,11 @@ const pageName = computed(() => {
                 <router-link to="/">
                     <img :src="VueLogo" width="52" height="52"/>
                 </router-link>
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
-                    aria-label="Toggle navigation" @click="fixScroll">
-                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
-                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                <button class="navbar-toggler collapsed" type="button" @click="fixScroll">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars" v-if="collapse"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times" v-if="!collapse"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarScroll">
+                <div class="navbar-collapse" id="navbarScroll" :class="{'collapse':collapse}">
                     <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll">
                         <li class="nav-item">
                             <router-link class="nav-link" aria-current="page" to="/" :class="{active:pageName==='Home'}">Home</router-link>
@@ -52,33 +71,7 @@ const pageName = computed(() => {
                         </div>
                     </nav>
                 </div>
-                <!-- //toggle switch for light and dark theme -->
             </nav>
         </div>
     </header>
 </template>
-
-
-<script>
-export default{
-    mounted() {
-        document.documentElement.setAttribute('data-theme', portfolioContext.state.theme);
-    },
-    methods:{
-        switchTheme(event) {
-            if (event.target.checked) {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                portfolioContext.commit("set_theme","dark")
-            }
-            else {        
-                document.documentElement.setAttribute('data-theme', 'light');
-                portfolioContext.commit("set_theme","light")
-            }
-        },
-        fixScroll(){
-            document.body.classList.toggle('noscroll');
-        }
-    }
-}
-</script>
-    
