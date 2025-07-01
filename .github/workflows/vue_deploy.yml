@@ -33,3 +33,11 @@ jobs:
           source: "dist/*"
           target: ${{ secrets.EC2_PATH }}
           strip_components: 1
+
+      - name: Restart Nginx Server
+        uses: leonowski/ec2-ssh-ghactions@v1
+        env:
+            username: ${{ secrets.EC2_USER }}
+            command: sudo nginx -t | sudo systemctl restart nginx
+            ec2_instance_id: ${{ secrets.EC2_HOST }}
+            region: ap-southeast-2
