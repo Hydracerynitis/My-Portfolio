@@ -1,14 +1,84 @@
 <script setup>
-import emailjs from '@emailjs/browser';
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { VueRecaptcha } from 'vue-recaptcha';
+import { ref } from 'vue';
 
+const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+const recaptchaSiteKey= import.meta.env.VITE_RECAPTCHA_SITE_KEY
+
 emailjs.init({
   publicKey: publicKey,
   limitRate: {
     throttle: 10000, // 10s
   },
 });
+
+const formData=ref({ user_name: '', user_email: '', subject: '', message: '' });
+const isLoading=ref(false);
+const message=ref('');
+const isSuccess=ref(false);
+const recaptchaToken=ref(null)
+
+function onRecaptchaVerify(token) {
+    recaptchaToken.value = token;
+    console.log('reCAPTCHA verified:', token);
+}
+function onRecaptchaExpired() {
+    recaptchaToken.value = null;
+    console.log('reCAPTCHA expired');
+}
+function onRecaptchaError(error) {
+    recaptchaToken.value = null;
+    console.error('reCAPTCHA error:', error);
+}
+
+function resetForm() {
+    formData.value = { user_name: '', user_email: '', subject: '', message: '' };
+}
+
+function sendEmail(){
+    if (!recaptchaToken.value) {
+        message.value = 'Please complete the reCAPTCHA verification before sending your message.';
+        isSuccess.value = false;
+        return;
+    }
+    isLoading.value = true;
+    message.value = '';
+    isSuccess.value = false;
+    emailjs.send(
+                serviceId,
+                templateId,
+                {
+                    subject: formData.value.subject,
+                    name: formData.value.user_name,
+                    email: formData.value.user_email,
+                    time: formData.value.user_email,
+                    message: formData.value.message,
+                    // recaptchaToken: recaptchaToken.value,
+                }
+            ).then(
+                (response) =>{
+                    console.log('SUCCESS!', response.status, response.text)
+                    isLoading.value = false;
+                    isSuccess.value = true;
+                    message.value = 'Thank you! Your message has been sent successfully.';
+                    resetForm();
+                },
+                (error) => {
+                    if (error instanceof EmailJSResponseStatus) {
+                        console.log('EMAILJS FAILED:', error);
+                    }
+                    else{
+                        console.error('Email sending failed:', error);
+                    }
+                    isLoading.value = false;
+                    isSuccess.value = false;
+                    message.value = 'Sorry, there was an error sending your message. Please try again or contact me directly at kejundai53@gmail.com';
+                }
+            )
+}
 </script>
 
 <template>
@@ -90,95 +160,3 @@ emailjs.init({
         </div>
     </section>
 </template>
-
-<script>
-import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
-export default {
-    data() {
-        return {
-            formData: {
-                user_name: '',
-                user_email: '',
-                subject: '',
-                message: ''
-            },
-            isLoading: false,
-            message: '',
-            isSuccess: false,
-            recaptchaToken: null,
-            recaptchaSiteKey: import.meta.env.VITE_RECAPTCHA_SITE_KEY
-        }
-    },
-    methods: {
-        onRecaptchaVerify(token) {
-            this.recaptchaToken = token;
-            console.log('reCAPTCHA verified:', token);
-        },
-        onRecaptchaExpired() {
-            this.recaptchaToken = null;
-            console.log('reCAPTCHA expired');
-        },
-        onRecaptchaError(error) {
-            this.recaptchaToken = null;
-            console.error('reCAPTCHA error:', error);
-        },
-        sendEmail() {
-            // Check if reCAPTCHA is verified
-            if (!this.recaptchaToken) {
-                this.message = 'Please complete the reCAPTCHA verification before sending your message.';
-                this.isSuccess = false;
-                return;
-            }
-
-            this.isLoading = true;
-            this.message = '';
-            this.isSuccess = false;
-
-            // Use Vite environment variables for service and template IDs
-            const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-            const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-           
-            emailjs.send(
-                serviceId,
-                templateId,
-                {
-                    subject: this.formData.subject,
-                    name: this.formData.user_name,
-                    email: this.formData.user_email,
-                    time: this.formData.user_email,
-                    message: this.formData.message,
-                    recaptchaToken: this.recaptchaToken, // Include reCAPTCHA token
-                }
-            ).then(
-                (response) =>{
-                    console.log('SUCCESS!', response.status, response.text)
-                    this.isLoading = false;
-                    this.isSuccess = true;
-                    this.message = 'Thank you! Your message has been sent successfully.';
-                    this.resetForm();
-                },
-                (error) => {
-                    if (error instanceof EmailJSResponseStatus) {
-                        
-                        console.log('EMAILJS FAILED:', error);
-                    }
-                    else{
-                        console.error('Email sending failed:', error);
-                    }
-                    this.isLoading = false;
-                    this.isSuccess = false;
-                    this.message = 'Sorry, there was an error sending your message. Please try again or contact me directly at kejundai53@gmail.com';
-                }
-            )
-        },
-        resetForm() {
-            this.formData = {
-                user_name: '',
-                user_email: '',
-                subject: '',
-                message: ''
-            };
-        },
-    }
-}
-</script>

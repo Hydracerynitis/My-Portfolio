@@ -21,7 +21,15 @@ import paragraph from '/src/components/paragraph.vue';
         <p class="mt-3">I am responsible for building model creation modules that can be invoked freely by the server to fit users’ different preferences.</p>
     </paragraph>
     <paragraph imageName="Covid" title="Covid Contact App" subtitle="MSA Web Development Assessment">
-        <p class="mt-3">Record your daily activities and get notified when becoming close contact.</p>
-        <p class="mt-3">If people that shared same destination with you becomes infected, you will be automatically tagged close contact</p>
+        <p class="mt-3">This app is made as software development assessment for the 2021 MSA Web Development program</p>
+        <p class="mt-3">It is made in the context of Covid-19, where keeping the whereabouts of infected cases and their
+            close contact is imperitive for the public health. This app provides a tool for general public to record their
+            daily activities online.</p>
+        <p class="mt-3">Whenever an user is flagged with infested through self reporting, other users that share the same 
+            destinations at the same time with infested individual will be automatically flagged with close contact. These
+            users will get notified such change due to a drastic change in the website's color.</p>
+        <p class="mt-3 highlight">The app is built with React (Typescript) + Apollo Hook, alongside GraphQL as its backend server.</p>
+        <a href="https://github.com/Hydracerynitis/MSA-Assessment" class="btn btn-style mt-3">Checkout its code repository</a>
+        <router-link class="btn btn-style mt-3 ms-5" to="demo/covidcontact">Or try out its demo</router-link>
     </paragraph>
 </template>

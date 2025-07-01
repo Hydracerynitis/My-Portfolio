@@ -64,15 +64,6 @@ span {
   outline: none;
 }
 
-a,
-a:hover,
-button,
-button:hover {
-  text-decoration: none;
-  transition: .5s all;
-  -moz-transition: .5s all;
-}
-
 iframe {
   border: none;
   display: block;
@@ -747,7 +738,6 @@ header {
   outline: none;
   border: none;
   background: var(--primary-color);
-  transition: all 1.8s ease-in-out;
 }
 
 .btn-style:hover {
