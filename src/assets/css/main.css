@@ -94,7 +94,8 @@ p {
 }
 
 p.highlight,
-p.highlight a{
+p.highlight a,
+span.highlight{
   color: var(--primary-color);
   font-weight: 600;
 }

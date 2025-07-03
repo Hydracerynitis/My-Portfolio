@@ -1,5 +1,12 @@
 <script setup>
 import paragraph from '/src/components/paragraph.vue';
+
+function topFunction() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    })
+}
 </script>
 
 <template>
@@ -12,7 +19,7 @@ import paragraph from '/src/components/paragraph.vue';
             with accuracy comparable with human labelling.</p>
         <p class="mt-3 highlight">Supervised by <a href="https://www.linkedin.com/in/katdost/">Katharina Dost</a> and 
             Jonanthan Kim</p>
-        <router-link to="/project/honor" class="btn btn-style mt-3">Learn More About it</router-link>
+        <router-link to="/project/honor" class="btn btn-style mt-3" @click="topFunction()">Learn More About it</router-link>
     </paragraph>
     <paragraph imageName="ArgusML" title="ArgusML - an ML Model creation webapp" subtitle="6-member Group Assignment"
             :imageRight="true" :imageSize=6>
@@ -20,8 +27,8 @@ import paragraph from '/src/components/paragraph.vue';
         <p class="mt-3">It uses MERN-stack technologies, with its server running Python subprocess to train Scitkit-Learn supported ML models and use them for predictions.</p>
         <p class="mt-3">I am responsible for building model creation modules that can be invoked freely by the server to fit users’ different preferences.</p>
     </paragraph>
-    <paragraph imageName="Covid" title="Covid Contact App" subtitle="MSA Web Development Assessment">
-        <p class="mt-3">This app is made as software development assessment for the 2021 MSA Web Development program</p>
+    <paragraph imageName="CovidUpload" title="Covid Contact App" subtitle="MSA Web Development Assessment" :imageSize="6">
+        <p class="mt-3">This app is made as software development assignment for the 2021 MSA Web Development program</p>
         <p class="mt-3">It is made in the context of Covid-19, where keeping the whereabouts of infected cases and their
             close contact is imperitive for the public health. This app provides a tool for general public to record their
             daily activities online.</p>
@@ -29,7 +36,6 @@ import paragraph from '/src/components/paragraph.vue';
             destinations at the same time with infested individual will be automatically flagged with close contact. These
             users will get notified such change due to a drastic change in the website's color.</p>
         <p class="mt-3 highlight">The app is built with React (Typescript) + Apollo Hook, alongside GraphQL as its backend server.</p>
-        <a href="https://github.com/Hydracerynitis/MSA-Assessment" class="btn btn-style mt-3">Checkout its code repository</a>
-        <router-link class="btn btn-style mt-3 ms-5" to="demo/covidcontact">Or try out its demo</router-link>
+        <router-link class="btn btn-style mt-3" to="project/covid" @click="topFunction()">Learn More About it</router-link>
     </paragraph>
 </template>

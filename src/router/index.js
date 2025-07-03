@@ -3,7 +3,8 @@ import HomeView from '/src/views/HomeView.vue'
 import ProjectView from '/src/views/ProjectView.vue'
 import ContactView from '/src/views/ContactView.vue'
 import notFoundView from '/src/views/NotFoundView.vue'
-import HonorView from '@/views/HonorView.vue'
+import HonorView from '/src/views/HonorView.vue'
+import CovidView from '/src/views/CovidView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,6 +23,11 @@ const router = createRouter({
       path: '/project/honor',
       name: 'Honor Dissertation',
       component: HonorView,
+    },
+    {
+      path: '/project/covid',
+      name: 'Covid Contact App',
+      component: CovidView,
     },
     {
       path: '/contact',
