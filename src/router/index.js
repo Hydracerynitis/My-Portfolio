@@ -5,6 +5,7 @@ import ContactView from '/src/views/ContactView.vue'
 import notFoundView from '/src/views/NotFoundView.vue'
 import HonorView from '/src/views/HonorView.vue'
 import CovidView from '/src/views/CovidView.vue'
+import ArgusMLView from '@/views/ArgusMLView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,6 +24,11 @@ const router = createRouter({
       path: '/project/honor',
       name: 'Honor Dissertation',
       component: HonorView,
+    },
+    {
+      path: '/project/argusML',
+      name: 'ArgusML Assignment',
+      component: ArgusMLView,
     },
     {
       path: '/project/covid',

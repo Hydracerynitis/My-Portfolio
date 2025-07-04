@@ -23,9 +23,16 @@ function topFunction() {
     </paragraph>
     <paragraph imageName="ArgusML" title="ArgusML - an ML Model creation webapp" subtitle="6-member Group Assignment"
             :imageRight="true" :imageSize=6>
-        <p class="mt-3">Develop a web app that allows users to train their own Machine Learning models by simply uploading their tabular data.</p>
-        <p class="mt-3">It uses MERN-stack technologies, with its server running Python subprocess to train Scitkit-Learn supported ML models and use them for predictions.</p>
-        <p class="mt-3">I am responsible for building model creation modules that can be invoked freely by the server to fit users’ different preferences.</p>
+        <p class="mt-3">ArgusML is a web app that handles Machine Learning models creations for the users, allowing users without
+            any knowledge of code or AI to create their own models to aid them processing their tabular data.</p>
+        <p class="mt-3">It is work of a six-member team for a university assignment. The team consists of 
+            <a href="https://github.com/Granicus0">Vinayak Joshi</a>, <a href="https://github.com/ABCCASa">Peter He</a>,
+            <a href="https://github.com/SLIU383">Steven Liu</a>, <a href="https://github.com/Alina618">Alina Xu</a>,
+            <a href="https://github.com/leihanZzZ">Leihan Zhang</a> and me. Throughout the developments, I am responsible
+            of implementing machine learning modules which will be invoked to train new models or using them for predictions
+            based on users' preference.</p>
+        <p class="mt-3 highlight">The app is built with MERN stack - MongoDB, Expres.js, React.js and Node.js.</p>
+        <router-link class="btn btn-style mt-3" to="project/argusML" @click="topFunction()">Learn More About it</router-link>
     </paragraph>
     <paragraph imageName="CovidUpload" title="Covid Contact App" subtitle="MSA Web Development Assessment" :imageSize="6">
         <p class="mt-3">This app is made as software development assignment for the 2021 MSA Web Development program</p>

@@ -29,14 +29,14 @@ import paragraph from '/src/components/paragraph.vue';
     <paragraph imageName="ssr_example" title="Sensitive SBC Framework" subtitle="Bias Mitigation Without Sensitie Attribute"
         :imageSize="6">
         <p class="mt-3">My research propose a new framework called Sensitive SBC to study bias without identifying the 
-            sensitive attributes that partitions the datasets. Sensiive SBC consists of <span class="highlight">Slice</span>
-            , <span class="highlight">Box</span>, and <span class="highlight">Complex</span>, each representing marginalised
+            sensitive attributes that partitions the datasets. Sensiive SBC consists of <b>Slice</b>
+            , <b>Box</b>, and <b>Complex</b>, each representing marginalised
             population within the data space with different levels of specificity.</p>
-        <p class="mt-3"><span class="highlight">Slice</span> represent an interval alongside the dimension of a single data feature. It is similar
+        <p class="mt-3"><b>Slice</b> represent an interval alongside the dimension of a single data feature. It is similar
              to how sensitive attribute separate marginalised groups and can be a replacement of them.</p>
-        <p class="mt-3"><span class="highlight">Box</span> is a combination of multiple <span class="highlight">Slices</span>,
+        <p class="mt-3"><b>Box</b> is a combination of multiple <b>Slices</b>,
             aims to describes marginalised populations as conjunctions of mutliple numerical measurements.</p>
-        <p class="mt-3"><span class="highlight">Complex</span> is a combination of multiple <span class="highlight">Boxes</span>
+        <p class="mt-3"><b>Complex</b> is a combination of multiple <b>Boxes</b>
             that cover a more complex area within the dataspace. It can also be disconnected as illustrated in the left graph.</p>
     </paragraph>
     <paragraph imageName="metabase" title="How to measure bias that we have yet to know?" subtitle="Research Experiement Setup"
@@ -53,12 +53,12 @@ import paragraph from '/src/components/paragraph.vue';
             complexity and how decision trees and decision stumps interact with them. We also apply our sensitive SBC Framework
             to them and calculate their bias metrics, which are modified to measure biased pattern in datasets.</p>
         <p class="ms-4"><b>3.</b> At last, we train machine learning models using meta-features extracted in previous step to make
-            them predict datasets' bias metrics. We have considered well-performed models such as <span class="highlight">Random Forest</span>, 
-            <span class="highlight">LightGBM</span>, <span class="highlight">XGBoost</span> and <span class="highlight">Multi-Layed-Perception</span>.
+            them predict datasets' bias metrics. We have considered well-performed models such as <b>Random Forest</b>, 
+            <b>LightGBM</b>, <b>XGBoost</b> and <b>Multi-Layed-Perception</b>.
             We also tested using ensembles of individual models or chaining them one-by-one to enhance their accuracy</p>
     </paragraph>
     <paragraph imageName="honor_result" title="Performance of Meta-Learning Models" subtitle="Research Result">
-        <p class="mt-3">Among all meta-learning models we trained, we found that <span class="highlight">LightGBM</span>
+        <p class="mt-3">Among all meta-learning models we trained, we found that <b>LightGBM</b>
             is the most accurate and computation-efficient model on both classification (is this dataset biased?) and regression
             (how much biased datasets are) tasks.</p>
         <p class="mt-3">As ilustrated in the graph, all meta-learning models are capable of matching our knowledge of bias in 

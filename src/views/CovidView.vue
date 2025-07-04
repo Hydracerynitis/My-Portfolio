@@ -3,16 +3,15 @@ import paragraph from '/src/components/paragraph.vue';
 </script>
 
 <template>
-    <paragraph imageName="CovidHome" title="Covid Contact Webapp" subtitle="Website Overview"
+    <paragraph imageName="CovidHome" title="Covid Contact Webapp" subtitle="Web App Overview"
     :imageSize=6>
         <p class="mt-3">This webapp is built as an illustration of my software development knowledge learned from the
             2021 MSA Web Ddevelopment program, which earns me a Certificate of Completion on Software Developement Pathway</p>
-        <p class="mt-3">The webapp follows <span class="highlight">Model-View-Controller</span> architecture. Its front 
-            end client is built with <span class="highlight">React</span> and its package <span class="highlight">Material UI</span>
-            and <span class="highlight">StoryBook</span>. Its back end server is based on <span class="highlight">GraphQL</span>
-            and <span class="highlight">HotChocolate</span>. I then use <span class="highlight">Apollo Client</span> to provide
-            backend server's queries and mutations to frontend client. Beside that, I also employ <span class="highlight">Jest</span>
-             and <span class="highlight">Github Authentication</span> to help aid my development process.
+        <p class="mt-3">The webapp follows <b>Model-View-Controller</b> architecture. Its frontend client is built with 
+            <b>React</b> and its package <b>Material UI</b> and <b>StoryBook</b>. Its back end server is based on 
+            <b>GraphQL</b> and <b>HotChocolate</b>. I then use <b>Apollo Client</b> to provide backend server's queries 
+            and mutations to frontend client. Beside that, I also employ <b>Jest</b> and <b>Github Authentication</b> to 
+            help aid my development process.
         </p>
     </paragraph>
     <paragraph imageName="CovidDiary" title="Premise of Covid Contact App" subtitle="Application Logic"
@@ -32,13 +31,13 @@ import paragraph from '/src/components/paragraph.vue';
     <paragraph imageName="CovidModel" title="Data Structure in the Server" subtitle="Data Model"
         :imageSize="6">
         <p class="mt-3">The data strucuture is composed of three tables to manage the application logic:
-            <span class="highlight">AppUser</span>, <span class="highlight">Entry</span>, <span class="highlight">Destination</span>
+            <b>AppUser</b>, <b>Entry</b>, <b>Destination</b>
         </p>
-        <p class="ms-4"><span class="highlight">AppUser</span> records users' profile information, their Covid 19 status and their
+        <p class="ms-4"><b>AppUser</b> records users' profile information, their Covid 19 status and their
             travel entries.</p>
-        <p class="ms-4"><span class="highlight">Entry</span> records the user who record it, the destination of the user and time
+        <p class="ms-4"><b>Entry</b> records the user who record it, the destination of the user and time
             user arrive and exit said destination</p>
-        <p class="ms-4"><span class="highlight">Destination</span> records the address and all entries that reference it. Whenever
+        <p class="ms-4"><b>Destination</b> records the address and all entries that reference it. Whenever
             a "Entry" row is inserted into the table, the destination that the new entry reference will also record its primary
             key. If the destination that new entry row is not in the table, then a new destination row will be generated.</p>
         <p class="ms-5">In this process, destination are recognized based on unique combincation of name and address.</p>
@@ -47,9 +46,7 @@ import paragraph from '/src/components/paragraph.vue';
             foreach newly flagged entry its destination will search for entries that entered before the infested
             leave. After that, the server will tagged all users who these entries belong to as clost contact.
         </p>
-        <p class="mt-3">For more details regarding this web application, you can check its code repository or try the demo that
-            I ported to Vue.</p>
+        <p class="mt-3">For more details regarding this web application, you can check its code repository.</p>
         <a href="https://github.com/Hydracerynitis/MSA-Assessment" class="btn btn-style mt-3">Link to Repository</a>
-        <router-link class="btn btn-style mt-3 ms-5" to="demo/covidcontact">Link to Demo</router-link>
     </paragraph>
 </template>
