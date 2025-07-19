@@ -10,15 +10,15 @@ import projectPreview from '/src/components/elements/projectPreview.vue';
                 <h3 class="title-style">Some of my most recent projects</h3>
             </div>
             <div class="row">
-                <projectPreview url="/project/honor" imageName="g1" title="Detect Unseen Bias with Metalearning">
+                <projectPreview url="/project/honor" imageName="MetaBias_thumb" title="Detect Unseen Bias with Metalearning">
                     Train meta-learning models to estimate bias in datasets using their meta-feature instead of explicit labels.
                 </projectPreview>
 
-                <projectPreview url="/project/argusML" imageName="g2" title="ArgusML">
+                <projectPreview url="/project/argusML" imageName="ArgusML_thumb" title="ArgusML">
                     Web app to train ML models without any code use.
                 </projectPreview>
 
-                <projectPreview url="/project/covid" imageName="g3" title="Covid Contact App">
+                <projectPreview url="/project/covid" imageName="Covid_thumb" title="Covid Contact App">
                     Record your daily activities and get notified when becoming close contact.
                 </projectPreview>
 
