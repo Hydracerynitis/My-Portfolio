@@ -8,6 +8,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment: production
 
     steps:
       - name: Checkout code
@@ -23,6 +24,11 @@ jobs:
 
       - name: Build Vue app
         run: npm run build
+        env:
+          VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
+          VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
+          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
+          VITE_RECAPTCHA_SITE_KEY: ${{ secrets.VITE_RECAPTCHA_SITE_KEY }}
 
       - name: Copy files to EC2 via SSH
         uses: appleboy/scp-action@v0.1.7

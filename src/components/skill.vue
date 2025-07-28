@@ -10,16 +10,16 @@ import skillProgress from '/src/components/elements/skillProgress.vue';
             </div>
             <div class="row py-lg-4">
                 <div class="col-lg-6 pe-lg-5">
-                    <skillProgress percentage="90" frontColor="#0d8abc" backColor="#61fded">Scikit-Learn</skillProgress>
-                    <skillProgress percentage="95" frontColor="#d45529" backColor="#eece90">Pandas</skillProgress>
-                    <skillProgress percentage="70" frontColor="#f646a9" backColor="#5c51ff">Seaborn</skillProgress>
+                    <skillProgress percentage=90 frontColor="#0d8abc" backColor="#61fded">Scikit-Learn</skillProgress>
+                    <skillProgress percentage=95 frontColor="#d45529" backColor="#eece90">Pandas</skillProgress>
+                    <skillProgress percentage=70 frontColor="#f646a9" backColor="#5c51ff">Seaborn</skillProgress>
                     <skillProgress class="mb-0"
                         percentage="75" frontColor="#e77654" backColor="#e5529a">MatplotLib</skillProgress>
                 </div>
                 <div class="col-lg-6 ps-lg-5 mt-lg-0 mt-5">
-                    <skillProgress percentage="75" frontColor="#0d8abc" backColor="#61fded">React.js</skillProgress>
-                    <skillProgress percentage="80" frontColor="#d45529" backColor="#eece90">Vue.js</skillProgress>
-                    <skillProgress percentage="60" frontColor="#f646a9" backColor="#5c51ff">Express.js</skillProgress>
+                    <skillProgress percentage=75 frontColor="#0d8abc" backColor="#61fded">React.js</skillProgress>
+                    <skillProgress percentage=80 frontColor="#d45529" backColor="#eece90">Vue.js</skillProgress>
+                    <skillProgress percentage=60 frontColor="#f646a9" backColor="#5c51ff">Express.js</skillProgress>
                     <skillProgress class="mb-0"
                         percentage="70" frontColor="#e77654" backColor="#e5529a">MongoDB</skillProgress>
                 </div>
