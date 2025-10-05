@@ -10,8 +10,7 @@ function topFunction() {
 </script>
 
 <template>
-    <paragraph imageName="honor_result" title="Detect Unseen Bias with Metalearning" subtitle="Honour Research Project"
-        imageSize="6">
+    <paragraph imageName="honor_result" title="Detect Unseen Bias with Metalearning" subtitle="Honour Research Project" :imageSize="6">
         <p class="mt-3">This research project develop new methods to investigate datasets' risk of training biased models 
             without explicit involvments' of sensitive attribute values, which is rarely explored in Fairness Machine Learning field.</p>
         <p class="mt-3">I propose the new framework called Sensitive SBC to use subspace of dataspace instead of set partition to represent 

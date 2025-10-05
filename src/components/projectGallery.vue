@@ -10,6 +10,9 @@ import projectPreview from '/src/components/elements/projectPreview.vue';
                 <h3 class="title-style">Some of my most recent projects</h3>
             </div>
             <div class="row">
+                <!-- <projectPreview url="/project/portfolio" imageName="portfolio_thumb" title="Portfolio Website">
+                    The website that you are currently seeing, which display various projects that I have worked on.
+                </projectPreview> -->
                 <projectPreview url="/project/honor" imageName="MetaBias_thumb" title="Detect Unseen Bias with Metalearning">
                     Train meta-learning models to estimate bias in datasets using their meta-feature instead of explicit labels.
                 </projectPreview>

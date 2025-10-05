@@ -3,9 +3,11 @@ import HomeView from '/src/views/HomeView.vue'
 import ProjectView from '/src/views/ProjectView.vue'
 import ContactView from '/src/views/ContactView.vue'
 import notFoundView from '/src/views/NotFoundView.vue'
-import HonorView from '/src/views/HonorView.vue'
-import CovidView from '/src/views/CovidView.vue'
-import ArgusMLView from '@/views/ArgusMLView.vue'
+
+import HonorView from '/src/views/projects/HonorView.vue'
+import CovidView from '/src/views/projects/CovidView.vue'
+import ArgusMLView from '/src/views/projects/ArgusMLView.vue'
+import PortfolioView from '/src/views/projects/PortfolioView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
