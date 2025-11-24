@@ -11,10 +11,12 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@modyfi/vite-plugin-yaml": "^1.1.1",
     "@tato30/vue-pdf": "^1.11.3",
     "pdfjs-dist": "^4.2.67",
     "serve": "^14.2.5",
     "vue": "^3.5.13",
+    "vue-i18n": "^11.2.1",
     "vue-recaptcha": "2.0.3",
     "vue-router": "^4.5.0",
     "vuex": "^4.1.0",

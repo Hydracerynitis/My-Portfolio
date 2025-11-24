@@ -7,11 +7,15 @@ const vuexPersist = new VuexPersistence({
 
 const portfolioContext = createStore({
   state:{
-    theme:"light"
+    theme:"light",
+    lang:"zh-CN"
   },
   mutations:{
     set_theme(state,new_theme){
       state.theme=new_theme
+    },
+    set_lang(state,new_lang){
+      state.lang=new_lang
     }
   },
   plugins: [vuexPersist.plugin]
