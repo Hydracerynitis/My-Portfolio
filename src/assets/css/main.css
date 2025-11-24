@@ -569,6 +569,15 @@ a.footer-logo i {
   width: 100%;
 }
 
+.lang_toggle {
+  :hover{
+    color: var(--primary-color);
+  }
+  :focus{
+    color: var(--primary-color);
+  }
+}
+
 a.dropdown-item {
   font-size: 16px;
   color: var(--heading-color);
@@ -623,6 +632,14 @@ header {
   display: none;
 }
 
+.lang-position  {
+    padding-right: 20px;
+}
+
+.navbar-collapse{
+  padding-left: 100px;
+}
+
 @media only screen and (max-width: 991px) {
   header.nav-fixed {
     height: auto;
@@ -639,8 +656,14 @@ header {
   }
 
   .navbar-collapse {
+    padding-left: 0;
     max-height: calc(100vh - 80px);
     overflow-y: scroll;
+    float: left;
+    text-align: center;
+    width: 100%;
+    background: var(--bg-grey);
+    box-shadow: 0 6px 19px rgba(0, 0, 0, 0.05);
   }
 
   .navbar-toggler {
@@ -652,13 +675,6 @@ header {
     box-shadow: none;
   }
 
-  .navbar-collapse {
-    float: left;
-    text-align: center;
-    width: 100%;
-    background: var(--bg-grey);
-    box-shadow: 0 6px 19px rgba(0, 0, 0, 0.05);
-  }
 
   .navbar-expand-lg .navbar-nav .nav-item {
     padding: 7px 0;
@@ -712,17 +728,19 @@ header {
   .cont-ser-position {
     position: absolute;
     right: 50px;
-    top: 18px;
+    top:15px;
+  }
+
+  .lang-position {
+    position: absolute;
+    right: 60px;
+    top:15px;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .navbar .navbar-brand {
     font-size: 32px;
-  }
-
-  .cont-ser-position {
-    top: 16px;
   }
 }
 

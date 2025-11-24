@@ -33,7 +33,7 @@ function switchTheme(event) {
 }
 
 function switchLanguage(event) {
-    if (event.target.checked) {
+    if (locale.value==="zh-CN") {
         locale.value="en"
     }
     else {        
@@ -59,21 +59,6 @@ function fixScroll(){
                     <span class="navbar-toggler-icon fa icon-expand fa-bars" v-if="collapse"></span>
                     <span class="navbar-toggler-icon fa icon-close fa-times" v-if="!collapse"></span>
                 </button>
-                <div class="cont-ser-position">
-                    <nav class="navigation">
-                        <div class="theme-switch-wrapper">
-                            <label class="theme-switch" for="checkbox" @change="switchLanguage">
-                                <input type="checkbox" id="checkbox">
-                                <div v-if="language==='en'">
-                                    <i class="gg-sun"></i>
-                                </div>
-                                <div v-else>
-                                    <i class="gg-moon"></i>
-                                </div>
-                            </label>
-                        </div>
-                    </nav>
-                </div>
                 <div class="navbar-collapse" id="navbarScroll" :class="{'collapse':collapse}">
                     <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll">
                         <li class="nav-item">
@@ -93,21 +78,27 @@ function fixScroll(){
                         </li>
                     </ul>
                 </div>
-                <!-- toggle switch for light and dark theme -->
-                <div class="cont-ser-position">
-                    <nav class="navigation">
-                        <div class="theme-switch-wrapper">
-                            <label class="theme-switch" for="checkbox" @change="switchTheme">
-                                <input type="checkbox" id="checkbox">
-                                <div v-if="portfolioContext.state.theme==='dark'">
-                                    <i class="gg-sun"></i>
-                                </div>
-                                <div v-else>
-                                    <i class="gg-moon"></i>
-                                </div>
-                            </label>
+                <div class="lang-position">
+                    <div class="lang_toggle" @click="switchLanguage">
+                        
+                        <div  v-if="language==='en'">
+                            <i class="fas fa-language"></i> English
                         </div>
-                    </nav>
+                        <div v-else>
+                            <i class="fas fa-language"></i> 简体中文
+                        </div>
+                    </div>
+                </div>
+                <div class="cont-ser-position">
+                    <label class="theme-switch" for="checkbox" @change="switchTheme">
+                        <input type="checkbox" id="checkbox">
+                        <div v-if="portfolioContext.state.theme==='dark'">
+                            <i class="gg-sun"></i>
+                        </div>
+                        <div v-else>
+                            <i class="gg-moon"></i>
+                        </div>
+                    </label>
                 </div>
             </nav>
         </div>
