@@ -31,8 +31,8 @@ onMounted(async()=>{
                     </div>
                 </div>
                 <div class="mt-lg-0 mt-5" :class="[{'ps-lg-5':!imageRight,'pe-lg-5':imageRight},paragraph_col]" >
-                    <h5 class="title-small mb-1">{{subtitle}}</h5>
-                    <h3 class="title-style">{{title}}</h3>
+                    <h5 class="title-small mb-1">{{ $t(subtitle)}}</h5>
+                    <h3 class="title-style">{{$t(title)}}</h3>
                     <slot/>
                 </div>
                 <div :class="image_col" v-if="imageRight">

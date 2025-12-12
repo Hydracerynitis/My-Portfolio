@@ -1,0 +1,49 @@
+home : "Home"
+project : "Project"
+contact : "Contact"
+
+footer_line1: "Built with <b>Vue</b> framework."
+footer_line2: "Contact me on the following Social Media platforms."
+
+banner_1 : "Hi, I'm Kejun Dai" 
+banner_2 : "New IT Graduate"
+banner_3 : |
+  I love to work in Data Analysis and Software Development.
+  I want to bring the best solutions to the problem with the power of Machine Learning
+hire_me : "Hire Me"
+
+about_T: "About Me"
+about_sT: "My Intro"
+about_p: |
+  I am a graduate student of the University of Auckland from New Zealand. I obatin the degree of "Bachelor of Advanced Science (Honor) with first class honor" with a GPA of 7.563. 
+  I specialize in Machine Learning, and have experienced in relevant research. I also have strong software development, creative thinking and collaboration skills. 
+  Currently I am looking for full-time graduate data scientist roles or software development roles.
+about_viewCV: "View My CV"
+about_contactMe: "Contact Me"
+
+resume_T: "My Awesome Journey"
+resume_sT: "Resume"
+resume_ed: "Eductation"
+resume_uni_T: "Bachelor of Advanced Science (Honor)"
+resume_uni_sT: "University of Auckland - Computer Science"
+resume_exp: "Experience"
+resume_intern_T: "Software Developer Internship"
+resume_intern_sT: "上海赞星科技有限公司"
+resume_ass_T: "Research Assistant"
+resume_ass_sT: "Wicker Lab, University of Auckland"
+present: "Present"
+
+skill_T: "My Specialised Skills"
+skill_sT: "Skill Expertises"
+
+portfolio_T: "My Recent projects"
+portfolio_sT: "Portfolio"
+thumb_BiasDetect: "Detect Unseen Bias with Metalearning"
+thumb_BiasDetect_desc: |
+  Train meta-learning models to estmate datasets' level of bias without using sensitive attributes.
+thumb_ArgusML: "ArgusML"
+thumb_ArgusML_desc: |
+  Web app that enables users to train Machine Learning models without any programming knowledge.
+thumb_Covid: "Covid Tracing App"
+thumb_Covid_desc: |
+  Developed during Covid. Record your daily activities and get notified when becoming close contact.

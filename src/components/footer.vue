@@ -33,15 +33,10 @@ onBeforeUnmount(()=>{
                 <router-link to="/">
                     <img :src="VueLogo" width="52" height="52"/>
                 </router-link>
-                <p class="mt-4 text-white">Built with <b>Vue</b> framework.</p>
-                <p class="text-white">Contact me on Social Media.</p>
+                <p class="mt-4 text-white" v-html="$t('home.footer_line1')"></p>
+                <p class="text-white">{{ $t('home.footer_line2') }}</p>
                 <div class="social-icons-main mt-4 pb-3">
                     <ul class="social-icons3">
-                        <li>
-                            <a href="https://www.facebook.com/kejun.dai.3">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                        </li>
                         <li>
                             <a href="https://github.com/Hydracerynitis">
                                 <i class="fab fa-github"></i>

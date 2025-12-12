@@ -63,17 +63,17 @@ function fixScroll(){
                     <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll">
                         <li class="nav-item">
                             <router-link class="nav-link" aria-current="page" to="/" :class="{active:pageName==='Home'}">
-                                {{ $t('menu.home') }}
+                                {{ $t('home.home') }}
                             </router-link>
                         </li>
                         <li class="nav-item">
                             <router-link class="nav-link" to="/project" :class="{active:pageName==='Project'}">
-                                {{ $t('menu.project') }}
+                                {{ $t('home.project') }}
                             </router-link>
                         </li>
                         <li class="nav-item">
                             <router-link class="nav-link" to="/contact" :class="{active:pageName==='Contact'}">
-                                {{ $t('menu.contact') }}
+                                {{ $t('home.contact') }}
                             </router-link>
                         </li>
                     </ul>

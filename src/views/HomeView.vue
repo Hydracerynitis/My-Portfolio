@@ -7,28 +7,10 @@ import paragraph from '@/components/paragraph.vue';
 </script>
 <template>
     <headlineBanner/>
-    <paragraph imageName="about" title="About Me" subtitle="My Intro">
-        <p class="mt-3">I am a graduate student of Bachelor of Advanced Science (Honor) with first class honor with a GPA of 7.563. 
-                        I specialize in Machine Learning and fairness in machine learning. Experienced in machine learning research, with strong software development, critical thinking and collaboration skills. 
-                        Currently looking for full-time graduate data scientist roles or software development roles.</p>
-        <div class="my-info mt-md-5 mt-4">
-            <ul class="single-info">
-                <li class="name-style">Name</li> <li>:</li> <li><p>Kejun Dai</p></li>
-            </ul>
-            <ul class="single-info">
-               <li class="name-style">Age</li> <li>:</li> <li><p>23 Years</p></li>
-            </ul>
-            <ul class="single-info">
-                <li class="name-style">From</li> <li>:</li> <li><p>Shanghai, China</p></li>
-            </ul>
-            <ul class="single-info">
-                <li class="name-style">Live in</li> <li>:</li> <li><p>Auckland, New Zealand</p></li>
-            </ul>
-            <ul class="single-info">
-                <li class="name-style">Email</li> <li>:</li> <li><p><a href="mailto:kejundai53@gmail.com">kejundai53@gmail.com</a></p></li>
-            </ul>
-        </div>
-        <router-link to="/Kejun_Dai_CV.pdf" target="_blank" class="btn btn-style mt-5">View My CV</router-link>
+    <paragraph imageName="about" title="home.about_T" subtitle="home.about_sT">
+        <p class="mt-3">{{$t('home.about_p')}}</p>
+        <router-link to="/Kejun_Dai_CV.pdf" target="_blank" class="btn btn-style m-5">{{$t('home.about_viewCV')}}</router-link>
+        <router-link to="/contact" class="btn btn-style m-5">{{$t('home.about_contactMe')}}</router-link>
     </paragraph>
     <qualification class="grey-color"/>
     <skill />

@@ -31,7 +31,7 @@ function topFunction() {
             <img class="card-img-bottom d-block" :src="imageUrl" alt="Card image cap">
                 <span class="overlay__hover"></span>
                 <span class="hover-content">
-                    <span class="title">{{title}}</span>
+                    <span class="title">{{$t(title)}}</span>
                     <span class="content"><slot/></span>
                 </span>
         </router-link>

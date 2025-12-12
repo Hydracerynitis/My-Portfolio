@@ -2,7 +2,7 @@
 import { computed  } from 'vue'
 
 const props=defineProps({
-    "percentage":Number,
+    "percentage":String,
     "frontColor":String,
     "backColor":String,
 })

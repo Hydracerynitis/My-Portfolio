@@ -1,0 +1,50 @@
+home : "主页"
+project : "我的项目"
+contact : "联系方式"
+
+footer_line1: "借由<b>Vue</b>框架下构建"
+footer_line2: "可以在以下社交媒体平台上联系我."
+
+banner_1 : "你好，我叫戴珂俊"  
+banner_2 : "新生IT应届生"
+banner_3 : |
+  我想要发展成为数据分析师和软件开发员。
+  我愿意发掘机器学习的潜力，来为每个问题带来最妙的解决方式。
+hire_me : "招募我"
+
+about_T: "关于我自己"
+about_sT: "自我介绍"
+about_p: |
+  我是一位在新西兰的奥克兰大学毕业的应届生。我在那以7.563的GPA获取了荣誉学士的学位("Bachelor of Advanced Science (Honor) with first class honor")
+  我专精于机器学习，并且有相关的研究经验。我也具备了强力的软件开发，创造性思维以及团队协作的能力。
+  现在我在找一份全职的应届数据分析师和软件开发者的工作。
+about_viewCV: "查看我的CV"
+about_contactMe: "联系我"
+
+resume_T: "我优秀的经历"
+resume_sT: "个人履历"
+resume_ed: "教育"
+resume_uni_T: "高级科学(荣誉)学士"
+resume_uni_sT: "奥克兰大学 - 计算机科学"
+resume_exp: "经历"
+resume_intern_T: "实习软件工程师"
+resume_intern_sT: "上海赞星科技有限公司"
+resume_ass_T: "研究助理"
+resume_ass_sT: "Wicker Lab,奥克兰大学"
+present: "至今"
+
+skill_T: "我掌握的技术"
+skill_sT: "技术专精"
+
+portfolio_T: "我参与过的个人项目"
+portfolio_sT: "作品集"
+thumb_BiasDetect: "使用元学习检测偏见"
+thumb_BiasDetect_desc: |
+  训练元学习模型来不使用敏感特征也能预测出数据集的受偏见影响程度。
+thumb_ArgusML: "ArgusML"
+thumb_ArgusML_desc: |
+  不需要编程知识也能训练机器学习模型的网络应用。
+thumb_Covid: "新冠期间去向追踪应用"
+thumb_Covid_desc: |
+  在新冠流行期间开发的。记录你日常的去向，并在成为密切接触者是马上收到通知。
+  

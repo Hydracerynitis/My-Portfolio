@@ -5,7 +5,7 @@ import portfolioContext from "@/context/PortfolioContext";
 
 const i18n =createI18n({
     legacy:false,
-    locale:portfolioContext.state.lang || 'en',
+    locale:portfolioContext.state.lang || 'zh-CN',
     fallbackLocale:en,
     globalInjection: true,
     messages:{en,'zh-CN':cn}

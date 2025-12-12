@@ -118,10 +118,7 @@ li {
   font-family: 'Poppins', sans-serif;
 }
 
-.noscroll {
-  min-height: 100vh;
-  overflow: hidden;
-}
+
 
 /* // Basic */
 
@@ -645,6 +642,10 @@ header {
     height: auto;
     padding: 14px 0;
   }
+  .noscroll {
+    min-height: 100vh;
+    overflow: hidden;
+  }
 
   header {
     height: auto;
@@ -1131,20 +1132,20 @@ ul.single-info li p {
   content: "";
   position: absolute;
   top: 10px;
-  left: 55px;
+  left: 75px;
   width: 3px;
   height: calc(100% - 10px);
   background: var(--primary-color);
 }
 
 .w3l-timeline-1 .timeline .column {
-  margin: 0px 40px 40px 120px;
+  margin: 0px 40px 20px 120px;
 }
 
 .w3l-timeline-1 h5.sub-title-timeline {
-  font-size: 24px;
+  font-size: 30px;
   line-height: 34px;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   margin-left: 2em;
 }
 
@@ -1162,7 +1163,7 @@ ul.single-info li p {
 .w3l-timeline-1 .timeline .column .title h2:before {
   content: "";
   position: absolute;
-  left: -73px;
+  left: -53px;
   top: 10px;
   width: 18px;
   height: 18px;

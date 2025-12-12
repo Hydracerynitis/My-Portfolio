@@ -5,8 +5,8 @@ import skillProgress from '/src/components/elements/skillProgress.vue';
     <section class="w3l-progress py-5" id="progress">
         <div class="container py-md-5 py-4">
             <div class="title-heading-w3 text-center mb-sm-5 mb-4">
-                <h5 class="title-small mb-1">My Skills</h5>
-                <h3 class="title-style">My Expertise Area</h3>
+                <h5 class="title-small mb-1">{{ $t("home.skill_sT") }}</h5>
+                <h3 class="title-style">{{ $t('home.skill_T') }}</h3>
             </div>
             <div class="row py-lg-4">
                 <div class="col-lg-6 pe-lg-5">

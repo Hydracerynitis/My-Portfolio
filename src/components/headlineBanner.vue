@@ -10,13 +10,11 @@ import bottomLeftIcon from '/src/assets/images/icon6.png'
         <div class="container" style="padding-bottom: 5rem;">
             <div class="row align-items-center">
                 <div class="col-md-6 banner-left pe-xl-5">
-                    <h4>Hi, I'm Kejun Dai</h4>
-                    <h3 class="mb-3 mt-1">New IT Graduate</h3>
-                    <p class="banner-sub me-md-5">I love to work in Data Analysis and Software Development.
-                        I want to bring the best solutions to the problem with the power of Machine Learning
-                    </p>
+                    <h4>{{ $t('home.banner_1') }}</h4>
+                    <h3 class="mb-3 mt-1">{{ $t('home.banner_2') }}</h3>
+                    <p class="banner-sub me-md-5">{{$t('home.banner_3')}}</p>
                     <div class="d-flex align-items-center buttons-banner mt-sm-5 mt-4">
-                        <router-link to="/contact" class="btn btn-style me-2">Hire Me</router-link>
+                        <router-link to="/contact" class="btn btn-style me-2">{{$t('home.hire_me')}}</router-link>
                     </div>
                 </div>
                 <div class="col-md-6">
