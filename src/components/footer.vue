@@ -1,6 +1,7 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from "vue";
 import VueLogo from "/src/assets/logo.svg"
+import { I18nT } from "vue-i18n";
 
 function topFunction() {
     window.scrollTo({
@@ -33,7 +34,9 @@ onBeforeUnmount(()=>{
                 <router-link to="/">
                     <img :src="VueLogo" width="52" height="52"/>
                 </router-link>
-                <p class="mt-4 text-white" v-html="$t('home.footer_line1')"></p>
+                <I18nT keypath="home.footer_line1" tag="p" class="mt-4 text-white">
+                    <b>Vue</b>
+                </I18nT>
                 <p class="text-white">{{ $t('home.footer_line2') }}</p>
                 <div class="social-icons-main mt-4 pb-3">
                     <ul class="social-icons3">

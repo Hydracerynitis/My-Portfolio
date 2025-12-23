@@ -1,0 +1,59 @@
+overview_Title: Covid Tracing App
+overview_subTitle: Web App Overview
+overview_p1: |
+  This application is developed to demonstrate my software development skills learned from the 2021 MSA Web 
+  Development program, which earns me the "Certificate of Completion on Software Developement Pathway" from
+  MSA at the same year.
+overview_p2: |
+  The web app follows {MVC} design. Its {V} is built with {React} using {Typescript} and its package 
+  {MUI} and {StoryBook}. Its {M} is based on {GraphQL} on .NET platform using {HotChocolate}. {Apollo} is 
+  used as {C} to perform query and mutation on {M} and send result to its {V}. Beside that, {Jest} is 
+  employed during development to automate unit tests.
+overview_MVC: Model-View-Controller
+overview_M: Model
+overview_V: View
+overview_C: Controller
+
+logic_Title: Usage of Covid Tracing App
+logic_subTitle: Application Logic
+logic_p1: |
+  This web app is built in the context of Covid outspread. During that time, it is important for people to be 
+  mindful for their daily whereabouts in order to identify themselves as close contacts of active cases as 
+  quickly as possible. In response, the web app provides tools for keeping track of users' travel histories
+  and notify them when they become close contacts. Whenever a user is tagged as active case, the application 
+  will mark his past locations as points of interests. Users that share points of interest with the active cases 
+  will then get notified that they have become close contacts when they check the app.
+logic_p2: |
+  The key to achieve it is done through the choice of color. At default, the color of UI will remain 
+  {normal}. After users become active case, the color of UI and their points
+  of interest will switch to {active}. And woudl-be clost contact users will discover
+  that the color of their website has changed to {close}, a way for the app to
+  notify them.
+logic_normal: green
+logic_active: red
+logic_close: orange
+
+data_Title: How do App Organises Travel Records?
+data_subTitle: Database Structure
+data_p1: |
+  The database consists of three tables that represent three classes that are essential for the application 
+  logics: {AppUser}, {Entry} and {Destination}
+data_p2: "{AppUser} contains information of users' profiles, their status regarding Covid and their travel history entries."
+data_p3: |
+  {Entry} represent users' travel histories. It contains users' destination, their arrival time and their exit
+  time.
+data_p4: |
+  {Destination} records the location's address and all {Entry} that reference it. It is identified by the 
+  combination of its name and address. Whenever a new {Entry} is created, the {Destination} obejct it 
+  references will automatically add the new {Entry} to its record. 
+data_p5: |
+  The application logic is implemented through propogation. When an {AppUser} is marked as {active}, all their 
+  {Entry} will be marked as interested. Such change will then propogate to {Destination} referenced by these
+  {Entry}. The database will then look up {Destination}'s record and search all {Entry} that shares the same 
+  time intervals with these interested {Entry}. The owner of the search results will then be flagged as {close}.
+data_close: close contacts
+data_active: active case
+
+more_detail: For more details regarding this web application, you can check its code repository.
+
+github: Link to Repository

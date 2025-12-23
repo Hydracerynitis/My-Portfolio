@@ -1,0 +1,48 @@
+overview_Title: 去向追踪应用
+overview_subTitle: 网站应用概述
+overview_p1: |
+  该应用是为了展示我从2021年MSA网站开发程序所学到的软件开发技术。这也让我赢得了同年的MSA“软件开发方向完成证书”
+  （Certificate of Completion on Software Developement Pathway）。
+overview_p2: |
+  该应用采用了{MVC}设计。它的{V}是用{Typescript}语言的{React}及其{MUI}与{StoryBook}的库构成。{M}部分
+  则是基于使用了{HotChocolate}的在.NET平台的{GraphQL}。{Apollo}则是它的{C}，用来处理{M}的查询与修改，并将其
+  结果发送到{V}去。另外，{Jest}也在开发期间被用来自动化模块测试。
+overview_MVC: 模型-视图-控制器
+overview_M: 模型
+overview_V: 视图
+overview_C: 控制器
+
+logic_Title: 去向追踪应用的用途
+logic_subTitle: 应用逻辑
+logic_p1: |
+  该网站应用是在新冠疫情期间开发的。当时，时刻记录自己的日常行踪以便能够及时确认自己是否成为了确诊病例的密
+  切接触者变得十分重要。因此，该应用提供了记录用户自己出行的工具，并且会在未来通知用户它们成为了密切接触者。
+  当有用户成为确诊病例时，应用会标注他过去的出行地点为兴趣点。与确诊病例共享兴趣点的用户会在他们检查应用通知
+  他们成为了密切接触者。
+logic_p2: |
+  我实现这个功能的关键在于颜色的选择。默认情况下，UI的颜色会维持在{normal}。在用户成为确诊病例后，它网站的UI
+  和兴趣点都会切换成{active}。而成为密切接触者的用户会发现它们的网站变成了{close}。这是应用通知它们的方式。
+logic_normal: 绿色
+logic_active: 红色
+logic_close: 橙色
+
+data_Title: 应用是如何储存出行记录的?
+data_subTitle: 数据库结构
+data_p1: |
+  数据库由3个表格构成，每个表都代表了这应用逻辑所需的类：{AppUser}，{Entry}和{Destination}
+data_p2: "{AppUser}包含了用户的账户信息，他们的新冠相关状况，以及他们有的出行记录。"
+data_p3: |
+  {Entry}代表了用户的出行信息。它包含了用户的目的地，他们的到达时间以及他们的离开时间。
+data_p4: |
+  {Destination}记录了地点的地址以及所有引用它的{Entry}。每个{Destination}是由它的名字与地址组合所辨识。
+  每当有新{Entry}创建时，它引用的{Destination}会自动把这个{Entry}加入到它的记录去。
+data_p5: |
+  应用逻辑是通过使用扩散来实现。每当有{AppUser}被标记成{active},他的{Entry}会被重点关注.这些改动会依次扩散
+  到{Destination}这些{Entry}引用的。数据库接下来会查看{Destination}的记录并搜索所有和之前重点关注{Entry}共享
+  同一时间的{Entry}。这个搜索结果的拥有者则会被标注为{close}。
+data_close: 密切接触者
+data_active: 确诊病例
+
+more_detail: 关于这项目的更多信息，你可以去查看这个项目的源码。
+
+github: 跳转到源码

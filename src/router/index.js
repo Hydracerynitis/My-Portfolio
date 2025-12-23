@@ -7,7 +7,6 @@ import notFoundView from '/src/views/NotFoundView.vue'
 import HonorView from '/src/views/projects/HonorView.vue'
 import CovidView from '/src/views/projects/CovidView.vue'
 import ArgusMLView from '/src/views/projects/ArgusMLView.vue'
-import PortfolioView from '/src/views/projects/PortfolioView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

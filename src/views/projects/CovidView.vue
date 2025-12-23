@@ -3,50 +3,74 @@ import paragraph from '/src/components/paragraph.vue';
 </script>
 
 <template>
-    <paragraph imageName="CovidHome" title="Covid Contact Webapp" subtitle="Web App Overview"
+    <paragraph imageName="CovidHome" title="covid.overview_Title" subtitle="covid.overview_subTitle"
     :imageSize=6>
-        <p class="mt-3">This webapp is built as an illustration of my software development knowledge learned from the
-            2021 MSA Web Ddevelopment program, which earns me a Certificate of Completion on Software Developement Pathway</p>
-        <p class="mt-3">The webapp follows <b>Model-View-Controller</b> architecture. Its frontend client is built with 
-            <b>React</b> and its package <b>Material UI</b> and <b>StoryBook</b>. Its back end server is based on 
-            <b>GraphQL</b> and <b>HotChocolate</b>. I then use <b>Apollo Client</b> to provide backend server's queries 
-            and mutations to frontend client. Beside that, I also employ <b>Jest</b> and <b>Github Authentication</b> to 
-            help aid my development process.
-        </p>
+        <p class="mt-3">{{ $t('covid.overview_p1') }}</p>
+        <I18nT keypath="covid.overview_p2" tag="p" class="mt-3">
+            <template #MVC><b>{{ $t('covid.overview_MVC') }}</b></template>
+            <template #M><b>{{ $t('covid.overview_M') }}</b></template>
+            <template #V><b>{{ $t('covid.overview_V') }}</b></template>
+            <template #C><b>{{ $t('covid.overview_C') }}</b></template>
+            <template #React><b>React</b></template>
+            <template #Typescript><b>Typescript</b></template>
+            <template #MUI><b>Material UI</b></template>
+            <template #Storybook><b>StoryBook</b></template>
+            <template #GraphQL><b>GraphQL</b></template>
+            <template #HotChocolate><b>HotChocolate</b></template>
+            <template #Apollo><b>Apollo Client</b></template>
+            <template #Jest><b>Jest</b></template>
+        </I18nT>
     </paragraph>
-    <paragraph imageName="CovidDiary" title="Premise of Covid Contact App" subtitle="Application Logic"
+    <paragraph imageName="CovidDiary" title="covid.logic_Title" subtitle="covid.logic_subTitle"
             :imageRight="true" :imageSize=6>
-        <p class="mt-3">The premise of the webapp is to provide users with a tool to keep track of their travel histories
-            and allow webapp to sort out whether they have become close contacts. Its business logic is that whenever a user 
-            tagged themselves as infected after being diagonised as positive, the server will mark or his travel destinations
-            as points of interests. Then it will flag other users that share point of interest at the same time as clost contact
-            and notify them when they login in.</p>
-        <p class="mt-3">The color of UI elements will also change based on users' Covid 19 status. At default, the UI elements remain
-            <span style="color:#4caf50 ; font-weight: 600;">green</span>. After users tage themselves as infested, the UI elements 
-            will switch to <span style="color:#e65100 ; font-weight: 600;">red</span>, an indication of being contacted with 
-            a dangerous disease. When the server have found out that users have become a clost contact, the UI elements will 
-            change to <span style="color:#ff8f00 ;font-weight: 600;">orange</span>, serving as a reminder to get themselves 
-            tested.</p>
+        <p class="mt-3">{{ $t('covid.logic_p1') }}</p>
+        <I18nT keypath="covid.logic_p2" tag="p" class="mt-3">
+            <template #normal><span class="txt_normal">{{ $t('covid.logic_normal') }}</span></template>
+            <template #active><span class="txt_active">{{ $t('covid.logic_active') }}</span></template>
+            <template #close><span class="txt_close">{{ $t('covid.logic_close') }}</span></template>
+        </I18nT>
     </paragraph>
-    <paragraph imageName="CovidModel" title="Data Structure in the Server" subtitle="Data Model"
-        :imageSize="6">
-        <p class="mt-3">The data strucuture is composed of three tables to manage the application logic:
-            <b>AppUser</b>, <b>Entry</b>, <b>Destination</b>
-        </p>
-        <p class="ms-4"><b>AppUser</b> records users' profile information, their Covid 19 status and their
-            travel entries.</p>
-        <p class="ms-4"><b>Entry</b> records the user who record it, the destination of the user and time
-            user arrive and exit said destination</p>
-        <p class="ms-4"><b>Destination</b> records the address and all entries that reference it. Whenever
-            a "Entry" row is inserted into the table, the destination that the new entry reference will also record its primary
-            key. If the destination that new entry row is not in the table, then a new destination row will be generated.</p>
-        <p class="ms-5">In this process, destination are recognized based on unique combincation of name and address.</p>
-        <p class="mt-3">The application logic is implemented in the following way:</p>
-        <p class="ms-4">When users flag themselves as infested, all entriess they uploaded will be flagged as interested. Then,
-            foreach newly flagged entry its destination will search for entries that entered before the infested
-            leave. After that, the server will tagged all users who these entries belong to as clost contact.
-        </p>
-        <p class="mt-3">For more details regarding this web application, you can check its code repository.</p>
-        <a href="https://github.com/Hydracerynitis/MSA-Assessment" class="btn btn-style mt-3">Link to Repository</a>
+    <paragraph imageName="CovidModel" title="covid.data_Title" subtitle="covid.data_subTitle"
+        :imageSize=6>
+        <I18nT keypath="covid.data_p1" tag="p" class="mt-3">
+            <template #AppUser><b>AppUser</b></template>
+            <template #Entry><b>Entry</b></template>
+            <template #Destination><b>Destination</b></template>
+        </I18nT>
+        <I18nT keypath="covid.data_p2" tag="p" class="mt-3">
+            <template #AppUser><b>AppUser</b></template>
+        </I18nT>
+        <I18nT keypath="covid.data_p3" tag="p" class="mt-3">
+            <template #Entry><b>Entry</b></template>
+        </I18nT>
+        <I18nT keypath="covid.data_p4" tag="p" class="mt-3">
+            <template #Destination><b>Destination</b></template>
+            <template #Entry><b>Entry</b></template>
+        </I18nT>
+        <I18nT keypath="covid.data_p5" tag="p" class="mt-3">
+            <template #AppUser><b>AppUser</b></template>
+            <template #Entry><b>Entry</b></template>
+            <template #Destination><b>Destination</b></template>
+            <template #close><span class="txt_close">{{ $t('covid.data_close') }}</span></template>
+            <template #active><span class="txt_active">{{ $t('covid.data_active') }}</span></template>
+        </I18nT>
+        <p class="mt-3">{{ $t('covid.more_detail') }}</p>
+        <a href="https://github.com/Hydracerynitis/MSA-Assessment" 
+           target="_blank" class="btn btn-style mt-3">{{ $t('covid.github') }}</a>
     </paragraph>
 </template>
+
+<style>
+.txt_normal{
+    color:#4caf50 ; 
+    font-weight: 600;
+}
+.txt_active{
+    color:#e65100 ; 
+    font-weight: 600;
+}
+.txt_close{
+    color:#ff8f00 ;
+    font-weight: 600;
+}
+</style>

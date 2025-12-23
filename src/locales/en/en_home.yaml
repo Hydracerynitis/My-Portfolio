@@ -2,11 +2,11 @@ home : "Home"
 project : "Project"
 contact : "Contact"
 
-footer_line1: "Built with <b>Vue</b> framework."
+footer_line1: "Built with {0} framework."
 footer_line2: "Contact me on the following Social Media platforms."
 
 banner_1 : "Hi, I'm Kejun Dai" 
-banner_2 : "New IT Graduate"
+banner_2 : "New IT Developer"
 banner_3 : |
   I love to work in Data Analysis and Software Development.
   I want to bring the best solutions to the problem with the power of Machine Learning

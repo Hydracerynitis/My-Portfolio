@@ -2,11 +2,11 @@ home : "主页"
 project : "我的项目"
 contact : "联系方式"
 
-footer_line1: "借由<b>Vue</b>框架下构建"
+footer_line1: "借由{0}框架下构建"
 footer_line2: "可以在以下社交媒体平台上联系我."
 
 banner_1 : "你好，我叫戴珂俊"  
-banner_2 : "新生IT应届生"
+banner_2 : "新生IT开发员"
 banner_3 : |
   我想要发展成为数据分析师和软件开发员。
   我愿意发掘机器学习的潜力，来为每个问题带来最妙的解决方式。

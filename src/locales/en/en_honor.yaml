@@ -1,0 +1,79 @@
+context_Title: Bias in Machine Learning Models
+context_subTitle: Research Context
+context_p1: |
+  Machine learning models were believed to be incapable of making biased predictions due to its reasoning is
+  purely power by statistical information extracted from historical data. 
+context_p2: |
+  As a result, Machine Learning Models are widely employed in sectors that are affected most by bias, such as
+  job recruitment, loan approval, credit risk assessment, and the judicial system, hoping they can help make these
+  sectors much fairer.
+context_p3: |
+  However, {0} had found evidence that proved Machine Learning models are still capable of making biased 
+  predictions. During their investigation of COMPAS, a tool used by US judge to assess defendants' risk of 
+  reoffense, they found that COMPAS is more likely overestimate black defants' risk, while underestimating white defendants' 
+  risk
+
+field_Title: Fairness Machine Learning
+field_subTitle: Research Field
+field_p1: |
+  Fairness Machine Learning is an emerging research field where researchers study how to prevent bias from 
+  affecting models. To this end, researchers develope bias metrics of models to evaluate how badly their 
+  predictions are affected by bias. Researchers also improve existing Machine learning algorithms to make them 
+  more resilient towards bias. In addition, researchers have developed bias evalution framework such as {AIF360}
+  and {Aequitas} to provides easier access of their research to practitioners. 
+field_p2: |
+  Reserachers have found that bias in Machine Learning models can be traced to their training daatasets.
+  However, most of their research focus on bias in models rather than bias in datasets. This is due to most 
+  research use sensitive attributes to define the bias they investigate. This makes 
+  bias in datasets much more visible, but they limited themselves to datasets that have sensitive attributes labels.
+field_p3: |
+  To address the research gap, I research to develop other ways to detect bias in dataset without relying 
+  on sensitive attributes.
+
+SBC_Title: Sensitive SBC Framework
+SBC_subTitle: Bias Detection Without Sensitie Attribute
+SBC_p1: |
+  In most cases, bias manisfest itself in datasets as imbalanced representation of marginalised populations
+  that Machine Learning models can pick up. As Sensitive attributes are generally the defining attribute of 
+  the marginalised populations. They making identifying marginalised groups and checking whether they suffered
+  from bias is much easier.
+SBC_p2: |
+  In order for us to identify marginalised groups in datasets without sensitive attributes, I propose 
+  {SBC}. It consists of {S1}, {B1} and {C1} to denote marginalised groups at different level.
+  {S} mark intervals on a singular feature. {B} combines multiple Slices to create a continous subspace. 
+  {C} group different Boxes together to non-continous subspace. A combinations of {S}, {B} and 
+  {C} can be used to describe the marginalised populations of any continous datasets.
+SBC: sensitive SBC framework
+S: Slice
+B: Box
+C: Complex
+
+experiment_Title: How to detect bias that we have yet to know?
+experiment_subTitle: Training Meta learning models
+experiment_p1: |
+  Compared to sensitive attributes, the senstive SBC models are usually invisible since it provides
+  no inforamtion of the bias and thus harder to find. As a result, we choose to detect the presense
+  of {any} bias instead of {certain} bias. We propose dataset-level bias metrics, which are inspired by 
+  model-level bias metrics such as Disparate Parity and Equal Opportunity, to quantify the influence of 
+  {any} bias.
+experiment_p2: |
+  We then train meta-learning models to leverage meta-properties of datasets to predict
+  their bias metrics values. We have extracted complexity metrics and mutual information of the datasets
+  as their meta-features. We also train simple machine learning models, and use their performance on the datasets
+  and their trained property as meta-features. The datasets used to train meta-learning models are synthetically generate with
+  a randomly assigned sensitive SBC model.
+any: any
+certain: certain
+
+result_Title: Performance of Meta-Learning Models
+result_subTitle: Research Result
+result_p1: |
+  Among all meta-learning models we trained, we found that {0} is the most accurate and computation-efficient
+  model on both classification (is this dataset biased?) and regression (how much biased datasets are) tasks.
+result_p2: |
+  As ilustrated in the graph, all meta-learning models are capable of simulating sensitive attributes
+  on real world datasets. However, their performance are not stable across all datasets or all bias metrics. 
+  Improving our meta-learning models, or introducing deep learning models will be the future work of this 
+  research.
+result_more: For more details regarding our honor research project, you can check our jounrals placed in below.
+journal: View Research Journal

@@ -1,0 +1,63 @@
+overview_Title: ArgusML - 在线机器学习模型创建应用
+overview_subTitle: Web App Overview
+overview_p1: |
+  This is work of a six-member group assignment from University. This web application provides tools
+  for tech-inexperienced users to train machine learning models based on their demands. The webapp handles 
+  the entire processes of training, evaluating and infering machine learning models, while all user need
+  to do is to upload their tabular data.
+overview_p2: |
+  The webapp uses a popular tech stacks called {MERN}, which consists of {MongoDB} database, {Express}
+  backend, {React} frontend and {Node} environment. In addition to those, we also use React library 
+  {Vite}, {Tree}, {D3} and {Chakra} to enhance our website presentation. {Postman} is also used for 
+  testing our backend APIs. Machine Learning modules are handled by {Python} library {Scikit}.  
+overview_p3: |
+  At the end of our assignment, we deployed app's frontend with {Vercel} and app's backend with {Render}.
+
+team_Title: Our Teamworks
+team_subTitle: Team Composition
+team_p1: |
+  Our team consists of {team} and me. Based on our skills and talents, we seperated ourselves into three groups:
+  {frontend}, {backend} and {ML}. 
+team_p2: |
+  {ML}, which I belonged to, is responsible for developing different standalone modules for preprocessing users' data,
+  training models, evaluating models and utilizing models. {frontend} is responsible for designing eye-catching 
+  websites and visualing evaluation results from machine learning modules. {backend} is responsible for designing 
+  APIs that connect different componetns of the app, deploying the app and sometimes providing helps to other teams. 
+  The exact arrangement can be seen on the right.
+team_front: Frontend team
+team_back: Backend team
+team_ML: Machien Learning team
+
+logic_Title: The Flow of ArgusML
+logic_subTitle: Application Logic
+logic_p1: |
+  The application has two main services: training new models, or using exisitng models for inference. 
+  In order to create new models, users need to log in to their account. After that, they needs to choose 
+  one of the supported Machine Learning algorithms to train, alongside other training settings. Then the rest 
+  they need to do is to upload their tabular data and wait for the server to process the training. 
+logic_p2: |
+  After Machine Learning modules finish training, the server will save the models and their schema in the
+  disk directly as binary files, while its ownership will be assigned to the users and will be stored in the
+  MongoDB database alongside the location of binary files.  
+logic_p3: |
+  Users can use their trained models to predict labels of future data. When they select one of their model,
+  the server will look up records in database to find correspounding binary files. After users upload their
+  new data, the server will load the model and its schema from disk. First it will check uploaded data against the
+  schema. If all match, the server will use the model to make predictions on the uploaded data and send results back
+  to client.
+
+challenge_Title: Running Python alongside Javascript
+challenge_subTitle: Greatest Challenge
+challenge_p1: |
+  Our greatest hurdle of the project is how to make Python program intergrate seemlessly with the MERN application 
+  monolith?. We not only require the MERN web application to be able to freely invoke and run multiple Python
+  programs to train different machine learning models, but also be able to receive outputs from each Python
+  program and send to correspounding clients. 
+challenge_p2: |
+  After several weekly discussion, we implement the following solution. Whenever the server needs to invoke
+  Machine Learning modules, it will start a new Python subprocess to run. It will continously monitor the 
+  terminal output of the subprocess and relay them towards a random port of the server. The client that send
+  the requests will pick up the output on the random port and visualise them for users to understand. Different
+  clients will assign different ports to receive Machine Learning modules' output to ensure concurrency.
+challenge_repo: For more details regarding this web application, you can check a public fork of its repository.
+challenge_link: Link to Repository

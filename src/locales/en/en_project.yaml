@@ -1,0 +1,41 @@
+learn_More: Learn More About it
+
+honor_Title: Detect Unseen Bias with Metalearning
+honor_subTitle: Honour Dissertation Research
+honor_p1: |
+  This research project explore new methods to investigate the risk of training biased models in datasets.
+  By not relying on explicit information of sensitive attributes, we are able to bring researches
+  in Fairness Machine Learning to other areas not touched by the reserach field.
+honor_p2: |
+  I propose a new model called Sensitive SBC, which uses several intervals of feature values to identify 
+  marginalised groups. Based on it, I train metalearning models to quantify datasets' risk of bias 
+  using their meta-feautres, with the accuracy that is on par with traditional methods.
+honor_super: |
+  Supervised by Professors {Kat} and {Kim}
+
+argus_Title: ArgusML - ML Model Creation Webapp
+argus_subTitle: 6-member University Group Assignment
+argus_p1: |
+  ArgusML is a web app that trains Machine Learning models for tech-illiterate users, allowing them to create
+  Machine Learning models that are tailored for their demands without typing any codes.
+argus_p2: |
+  It is developed by our six-member team for a university group assignment. Our team consists of {Team} and myself. 
+  I am responsible of the development of machine learning modules, which handles model trainings and model
+  inferences, and can be freely invoked by the application backend.
+argus_tech: |
+  The app is built with MERN stack - MongoDB database, Expres.js backend, React.js frontend
+  and Node.js environment.
+
+covid_Title: Covid Tracing App
+covid_subTitle: MSA Web Development Assessment
+covid_p1: This app is developed for stage II assignment of the 2021 MSA Web Development program during Covid outspread.
+covid_p2: |
+  During the peak of Covid outspread, it is important for people to be mindful for their daily whereabouts 
+  in order to identify themselves as close contacts of active cases as quickly as possible. This app provides
+  tool for users to record their daily activities, and it can notice would-be close contacts based on their records.
+covid_p3: |
+  Whenever an user is flagged to be an active case (either by themselves or other agents), users that had share 
+  the same location with the active case will be automatically flagged with close contact. These users can then
+  get notified by checking the app (or by receiving messages sent by the app).
+covid_tech: |
+  The frontend of the app is built with React (Typescript) + Apollo. Its backend is built with GraphQL on .NET platform.
